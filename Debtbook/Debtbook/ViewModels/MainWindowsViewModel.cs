@@ -20,9 +20,7 @@ namespace Debtbook.ViewModels
     {
         private ObservableCollection<Debitor> debitors;
         
-        
-     
-
+       
         public MainWindowsViewModel()
         {
 
@@ -70,12 +68,12 @@ namespace Debtbook.ViewModels
             }
         }
 
-        ICommand _editCommand;
+        ICommand _EditDebitorCommand;
         public ICommand EditDebitorCommand
         {
             get
             {
-                return _editCommand ?? (_editCommand = new DelegateCommand(() =>
+                return _EditDebitorCommand ?? (_EditDebitorCommand = new DelegateCommand(() =>
                            {
                                
                                var vm = new DebitorViewModel(CurrentDebitor)
@@ -104,13 +102,13 @@ namespace Debtbook.ViewModels
         }
 
 
-        private ICommand _addDebitor;
+        private ICommand _AddDebitorCommand;
             
         public ICommand AddDebitorCommand
         {
             get
             {
-                return _addDebitor ?? (_addDebitor = new DelegateCommand(() =>
+                return _AddDebitorCommand ?? (_AddDebitorCommand = new DelegateCommand(() =>
                            {
                                
                                var vm = new AddDebitorViewModel(Debitors);

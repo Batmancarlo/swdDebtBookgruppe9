@@ -42,13 +42,13 @@ namespace Debtbook.ViewModels
             }
         }
 
-        ICommand _newDebitorCommand;
+        ICommand _AddNewDebitor;
 
         public ICommand AddNewDebitor
         {
             get
             {
-                return _newDebitorCommand ?? (_newDebitorCommand = new DelegateCommand(() =>
+                return _AddNewDebitor ?? (_AddNewDebitor = new DelegateCommand(() =>
                 {
                     if (int.TryParse(newDebtValue, out int n))
                         debitors_.Add(new Debitor(newDebtName,Convert.ToDouble(newDebtValue)));

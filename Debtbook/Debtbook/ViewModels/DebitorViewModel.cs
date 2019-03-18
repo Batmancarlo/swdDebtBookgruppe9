@@ -55,13 +55,13 @@ namespace Debtbook.ViewModels
             }
         }
 
-        ICommand _newDebtCommand;
+        ICommand _AddNewDebtCommand;
 
         public ICommand AddNewDebtCommand
         {
             get
             {
-                return _newDebtCommand ??(_newDebtCommand = new DelegateCommand(() =>
+                return _AddNewDebtCommand ?? (_AddNewDebtCommand = new DelegateCommand(() =>
                 {
                     if(int.TryParse(newDebtValue, out int n))
                     {

@@ -24,10 +24,6 @@ namespace Debtbook
             InitializeComponent();
         }
 
-        private void DgDebitors_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
